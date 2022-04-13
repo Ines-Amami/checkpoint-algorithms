@@ -1,0 +1,24 @@
+ALGORITHM sentences
+VAR
+    voy :INTEGER:=0;
+    word :INTEGER:=1;
+    leng:INTEGER:=0;
+    c:CHAR:='';
+    str:STRING:='';
+BEGIN
+    WHILE (c<>".") DO
+     Write("donner le charactere");
+     Read(c);
+     leng:=leng+1;
+     str:=str+c;
+     Write("The length of the sentence");
+     IF (c:=" ") THEN
+       word:= word+1;
+     END_IF
+     Write("The number of words in the sentence");
+     IF (c:="a"or c:="e" or c:="o" or c:="i" or c:="u") THEN
+        voy:=voy+1;
+     END_IF
+     Write("the number of vowels in the sentence");
+    END_WHILE
+END
